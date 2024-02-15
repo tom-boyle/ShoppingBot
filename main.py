@@ -1,22 +1,22 @@
-import pyautogui
+import os
 import time
+import pyautogui
+import webbrowser
 
-# Open the start menu (Windows key)
-pyautogui.hotkey('win')
+# Path to Chrome (change to your path)
+chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'
 
-# Wait for the start menu to open
-time.sleep(2)
+# URL to open
+url = 'https://marketplace.ticketek.com.au/'
 
-# Type the name of the web browser you want to open
-pyautogui.write('DuckDuck')  # replace 'Chrome' with the name of your web browser
-pyautogui.press('enter')
+# Open Chrome
+os.startfile(chrome_path)
 
-# Wait for the web browser to open
+# Wait for Chrome to open
 time.sleep(5)
 
-# Type the URL of the webpage you want to open
-pyautogui.write('https://marketplace.ticketek.com.au/')  # replace with your webpage URL
-pyautogui.press('enter')
+# Open URL
+webbrowser.open(url)
 
 # Wait for the webpage to load
 time.sleep(10)
